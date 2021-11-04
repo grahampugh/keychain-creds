@@ -51,7 +51,7 @@ lock_keychain() {
 apicredentials=[]
 
 unlock_keychain
-for name in keynames ; do
+for name in $keynames ; do
     apicredentials[$name]=$( get_api_creds $name )
 done
 lock_keychain
